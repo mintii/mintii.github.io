@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<head>
+  <title>Blog - Code Brittney</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/font-awesome-4.5.0/font-awesome-4.5.0/css/font-awesome.css">
+  <link href='https://fonts.googleapis.com/css?family=Press+Start+2P|Varela+Round' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+  <nav class="blog-nav">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="www.google.com">Projects</a></li>
+      <li><a href="www.google.com">About Me</a></li>
+      <li><a href="www.google.com">Outside...</a></li>
+    </ul>
+  </nav>
+  <div class="logo-header">
+    <img src="../imgs/RogueGalaxy.png">
+    <h1>Code Brittney</h1>
+  </div>
+
+<div class="wrapper">
+
+  <main class="main-blog">
+  
+    <article id="post">
+     <img src="../imgs/cable-bird-sky.jpg" alt="Bird sitting on cable wire outside">
+    <h2>Git, GitHub, Open Source, and other things</h2>
+     <h4><a href="https://github.com/mintii/phase-0/blob/master/week-1/my-website-1-reflection.md">Wrapping up Week 1</a></h2>
+
+    <h4>What is the difference between margin, border, and padding?</h4>
+    <img src="http://i.imgur.com/4t7Yg5i.png">
+    <p> Margins are to help push away content. Borders are used to help encircle the content. Padding helps to push in and cushion your content. </p>
+
+    <h4>What are the best practices associated with using classes vs. ids?</h4>
+    <p>It's best to use classes over ids. That way you can use the same class on multiple elements OR <em>multiple classes on the same element!</em> When you use ids, you can only use that ID on one element once on a page. </p>
+    <p>To complicate it more, browsers are more finicky on how ids are used, but CSS doesn't care. In CSS there is nothing different between the two. Therefore it's best to proceed with caution when implementing ids. Ask yourself, could this styling be used throughout more places on your site? </p>
+    <a href="https://css-tricks.com/the-difference-between-id-and-class/">ID's and Classes are "hooks"</a>
+
+    <h4>What are the differences between relative, absolute, fixed, and static positioning?</h4>
+
+    <p>Static Position is the default type of positioning for an element. Elements stack one after another in how they were coded in HTML.</p>
+    <p>Relative Position will move on it's own and can overlap over other elements using z-index and top, bottom, left, right directions. If you specify top: 100px; and left: 50px; it will away from these locations by the specified pixels. What happens is that where it originally was will continue to hold as a placeholder and will not affect the flow of static elements around it. </p>
+    <p>Fixed Position is positioned based on the browser window and where you direct it to go with top, right, bottom, and left. A fixed position element will stay in that place even when the page is scrolled. </p>
+    <p>Absolute Position will allow for other static elements to move up and fill the space where the absolute element would have been. It determines it's positioning by the parent elements. When the parents are static, then an absolute position element will take its position based on the <body> </p>
+    <a href="http://www.webdevbydoing.com/whats-the-difference-between-static-relative-absolute-and-fixed-positioning/"> What’s the difference between Static, Relative, Absolute and Fixed Positioning?</a>
+
+    <h4>What does it mean to display inline vs using inline block?</h4>
+    <p> Display inline means to allow the elements to flow together and appear continuous. Display inline block means that they will block by having clear defined boundaries and will sit side by side. Depending on your needs for a page, using display inline and inline block may prove beneficial over positionings and floats! 
+    <a href="http://designshack.net/articles/css/whats-the-deal-with-display-inline-block/">What’s the Deal With Display: Inline-Block?</a>
+   </article>
+
+   
+ </main>
+
+ <aside>
+   <div class="profile-photo">
+     <img src="../imgs/brittney-profile.jpg">
+   </div>
+   <div class="social-media">
+    <ul>
+      <li><a href="#" alt="Facebook"><i class="fa fa-facebook"></i></a></li>
+      <li><a href="#" alt="Instagram"><i class="fa fa-instagram"></i></a></li>
+      <li><a href="#" alt="GitHub"><i class="fa fa-github-alt"></i></a></li>
+      <li><a href="#" alt="YouTube"><i class="fa fa-youtube"></i></a></li>
+   </ul>
+
+   </div>
+  </aside>
+
+ </div>
+
+ <footer>
+  <div class="social-media">
+    <ul>
+      <li><a href="#" alt="Facebook"><i class="fa fa-facebook"></i></a></li>
+      <li><a href="#" alt="Instagram"><i class="fa fa-instagram"></i></a></li>
+      <li><a href="#" alt="GitHub"><i class="fa fa-github-alt"></i></a></li>
+      <li><a href="#" alt="YouTube"><i class="fa fa-youtube"></i></a></li>
+   </ul>
+ </div>
+
+ <div class="contact-info">
+
+ </div>
+ <div class="blog-archive">
+  <ul>
+    <li>2016</li>
+  </ul>
+  
+</div>
+</footer>
+</body>
+</html>
