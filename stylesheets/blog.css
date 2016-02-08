@@ -8,7 +8,7 @@ html,body {
 }
 
 html {
-	background: url(../imgs/174.JPG) no-repeat center center fixed;
+	background: url(../imgs/174.jpg) no-repeat center center fixed;
 	/*Background courtesy of Symufa from Creative Market creativemarket.com*/
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -139,6 +139,12 @@ article {
 	height: 400px;
 	width: auto;
 	background-color: #FFE1B3;
+	overflow: auto;
+}
+
+#post {
+	overflow: auto;
+	color: black;
 }
 
 article img {
