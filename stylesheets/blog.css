@@ -1,0 +1,180 @@
+/*Adjustment for width discrepancy */
+html,body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+html {
+	background: url(../imgs/174.jpg) no-repeat center center fixed;
+	/*Background courtesy of Symufa from Creative Market creativemarket.com*/
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+/*	Courtesy of https://css-tricks.com/perfect-full-page-background-image/
+*/}
+
+.blog-nav {
+	clear: right;
+	position: relative;
+	top: 0;
+	width: 55%;
+	height: 35px;
+	background-color: rgba(21, 45, 71, 0.5);
+	font-size: 0.7em;
+	margin-left: 15%;
+}
+
+.blog-nav ul {
+	list-style-type: none;
+	padding: 0px;
+	text-align: center;
+}
+
+.blog-nav ul li {
+	float: left;
+	margin-right: 30px;
+	margin-top: 10px;
+	width: 15%;
+	display: block;
+
+}
+
+.logo-header{
+	position: relative;
+	width: 55%; 
+	height: 65px;
+	margin-top: 5px;
+	margin-left: 15%;
+}
+
+.logo-header img{
+	z-index: 1;
+	object-fit: none ;
+	object-position: 85% 35%; 
+	/*  Learn more about object-fit and position 
+	Essentially what these two are doing are saying how the image
+	should fill the logo-header div and where on an X Y coordiate should 
+	the image be positioned!
+	https://css-tricks.com/almanac/properties/o/object-position
+	*/
+	height: 100%;
+	width: 100%;
+	}
+/*	Using CSS3 to help center and position the image so I use the same image 
+but fill it into a div
+http://stackoverflow.com/a/11552460 */
+
+.logo-header h1 {
+	position: relative;
+	z-index: 2;
+	top: -65px;
+	float: right;
+	font-family: 'Press Start 2P', cursive;
+	font-size: 1.5em;
+	text-align: center;
+	color: #FAC587;
+	text-shadow: 0px 3px #8D622F;
+}
+
+.wrapper {
+	top: -55px;
+	position: relative;
+	width: 55%;
+	overflow: auto;
+	margin-top: 5px;
+	margin-left: 15%;
+	margin-right: 15%;
+	background-color: rgba(213, 161, 83, 0.5);
+}
+
+.feature-post {
+	width: 100%;
+	height: 500px;
+	margin-bottom: 10px;
+}
+
+.feature-post h2 {
+	position: relative;
+	font-family: 'Press Start 2P', cursive;
+	z-index: 2;
+	text-align: center;
+	color: #FAC587;
+	text-shadow: 0px 3px #8D622F;
+	left: -25%;
+	top: 90%;
+}
+
+.feature-post img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 500px;
+	width: 100%;
+	object-fit: none ;
+	object-position: 60% 50%;
+	z-index: 1;
+}
+
+.main-blog {
+	width: 63%;
+	float: left;
+	background-color: #59879F;
+	margin-right: 5px;
+
+}
+
+aside {
+	width: 35%;
+	float: right;
+	background-color: #FACD87;
+	overflow: auto;
+}
+
+article {
+	height: 400px;
+	width: auto;
+	background-color: #FFE1B3;
+}
+
+article img {
+	height: 200px;
+	width: 97.75%;
+	object-fit: none ;
+	object-position: 60% 100%;
+	padding: 5px;
+}
+
+
+.profile-photo  img {
+	height: 35%;
+	width: 65%;
+	margin-left: 15%;
+	margin-right: 15%;
+	margin-top: 5%;
+}
+
+aside .social-media ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	background-color: red;
+	height: 50px;
+	width: 100%;
+}
+
+aside .social-media ul li {
+	padding: 0;
+	background-color: honeydew;
+}
+
+aside .social-media li a {
+	padding: 0;
+	color: #8DB1C4;
+}
+
+
