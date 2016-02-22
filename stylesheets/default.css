@@ -23,6 +23,18 @@ body {
 	width: auto;
 }
 
+.contact-main {
+	position: relative;
+	height: 200px;
+	width:  600px;
+	left: 20%;
+	top: 30%;
+	text-align: center;
+	background-color: rgba(141, 177, 196, 0.88);
+}
+.contact-main ul {
+	list-style-type: none;
+}
 .main-nav {
 	position: relative;
 	top: 11%;
