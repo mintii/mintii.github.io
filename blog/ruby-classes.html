@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<head>
+  <title>Blog - Code Brittney</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/font-awesome-4.5.0/font-awesome-4.5.0/css/font-awesome.css">
+  <link href='https://fonts.googleapis.com/css?family=Press+Start+2P|Varela+Round' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+  <nav class="blog-nav">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="www.google.com">Projects</a></li>
+      <li><a href="www.google.com">About Me</a></li>
+      <li><a href="www.google.com">Outside...</a></li>
+    </ul>
+  </nav>
+  <div class="logo-header">
+    <img src="../imgs/RogueGalaxy.png">
+    <h1>Code Brittney</h1>
+  </div>
+
+  <div class="wrapper">
+    <main class="main-blog">
+      <article id="post">
+
+        <h1>Understanding Ruby Classes</h1>
+        <pre class="code">
+          <code>
+          </code>
+          class Cat_Treats
+          def initialize(cat_name)
+          @cat_name = cat_name
+          end
+          def fur_color
+            @fur_color
+          end 
+
+          def fur_color=(color)
+          @fur_color = color
+          end
+
+          def fav_treat=(treat)
+          @fav_treat = treat
+          end
+
+          def fav_treat
+          @fav_treat
+          end
+
+          def age=(human_years)
+          @age = human_years
+          end
+
+          def age 
+          @age
+          end
+          end                             
+        </code>
+      </pre>
+
+      <h2>Imagine a game, that's cat-tastic like Neko Atsume, but even better....coded in Ruby!</h2>
+
+      <p>
+        Just like Neko Atsume, this game will involve different factors influencing its output. Something amazing happens with cat treats when we group together the cat's fur color, favorite treats, and age. You will see above I have created a class to group them together, because they are a <em>collection</em> of needed actions. 
+      </p>
+
+      <p>def initialize are these initial objects you want to jumpstart for the class. I have included name, that means that when I immediately type in Class.new, I'm going to see a variable stored. That way I've already got an instantiated method, with a cat's name, even if none of the other details are known yet. </p>
+
+      <p>
+        Next we have fur color, which is passed through a method when it's used outside of the class. We put the little curly a's in the beginning because they look like cat tails. 
+      </p>
+      <p>
+        Wait, no these are actually instance variables. They are useful for referencing throughout my class, and across several instance methods. And even this method is a special snowflake because it's job is to always <em>read</em>. That means it will always return a value or state, but doesn't change it. 
+      </p>
+
+      <p>
+        Since cats can be picky eaters, we may need to update these values outside of the class often, so the next method, fav_treats=, will be able to <em>write</em> values outside of the class. It would be amazing, but can't read back to us what's in the catnip. So the following method, fav_treats, is our handy reader method to return our @fav_treats
+      </p>
+
+      <p>
+        And we do the same thing for age. And we have our shiny new class! 
+      </p>
+
+      <pre class="code">
+        <code>
+          Input: 
+          0   p rogue_treats = Cat_Treats.new("Rogue")
+          1   p rogue_treats.fur_color("orange and white")
+          2   p rogue_treats.fav_treat = "nums"
+          3   p rogue_treats.fav_treat
+          4   p rogue_treats.age = 12
+          5   p rogue_treats.age
+        </code>
+        <code>
+          Output:
+          #<Cat_Treats:0x000000022d65c0 @cat_name="Rogue"> 
+          "orange and white" 
+          "nums" 
+          "nums" 
+          12 
+          12 
+        </code>
+      </pre>
+      <p>Here I we see that the corresponding outputs to what I've typed up. All that code doesn't print very much, does it? I've certainly got to preserve space because this new game is going to be <em>huge</em> and I need to keep a tidy program!
+      </p>
+      <p>
+        We can refactor our program down to 7 lines from our previous 24. Witchcraft, you say? Well I'm not Giles Corey (The Crucible) so lay off on the stones, because I've got Ruby to teach ya! 
+      </p>
+      <pre class="code">
+        <code>
+          class Cat_Treats
+            attr_accessor :fav_treat, :age, :fur_color
+            attr_reader :cat_name
+
+            def initialize(cat_name)
+              @cat_name = cat_name
+            end
+          end
+        </code>
+      </pre>
+      <p>
+        What are these attr things? It looks like the start of a fax machine, I know! Don't make fun of them, because they are super helpful guys. 
+      </p>
+      <p>
+        Let's start with describing attr_reader first. This is a shortcut method of helping to define a method that's a reader method. Although it is a symbol here, you can call to them outside of the class just as you did before as well as use it as an @instance_variable. 
+      </p>
+
+      <p>The twin sister to attr_reader is attr_writer. Just like writer methods explained earlier, she helps to set values to methods and @instance_variables within the class. attr_writer has so much potential, but she can't read. So that's leading to some difficulties... </p>
+      <p>
+        Luckily we have attr_accessor to tidy up these situations. attr_accessor is the Moon Prism Palette of Sailor Moon. Take it out, let the rainbow beams engulf you, and suddenly you're linked with your moon goddess. attr_reader and attr_accessor are one, so in our situation of my Cat_Treats class, it knocks down 18 lines into 2 lines (if we used attr_reader/writer) to now one line with attr_accessor!
+      </p>      
+
+      <p>
+      When you type in the refactored code with the same inputs we gave earlier, we see the same output. attr_methods are great ways to help clear up space, and organize the smaller methods that are simply reading or writing values. This will now allow me to write my wicked new  cat game!
+      </p>
+
+      <h2>Useful Resources to Learn More:</h2>
+      <ul>
+        <li><a href="http://stackoverflow.com/questions/5046831/why-use-rubys-attr-accessor-attr-reader-and-attr-writer"></a>"Stack Overflow:Why use Ruby's attr_accessor, attr_reader and attr_writer?</li>
+        <li><a href="http://ruby-for-beginners.rubymonstas.org/writing_classes/attribute_readers.html"></a>Attribute readers</li>
+        <li><a href="https://www.manning.com/books/the-well-grounded-rubyist-second-edition"></a>The Well-Grounded Rubyist, Chapter 3: Organizing Objects with Classes</li>
+
+      </ul>
+    </article>
+
+
+  </main>
+
+ <!--  <aside>
+   <div class="profile-photo">
+     <img src="../imgs/brittney-profile.jpg">
+   </div>
+   <div class="social-media">
+    <ul>
+      <li><a href="#" alt="Facebook"><i class="fa fa-facebook"></i></a></li>
+      <li><a href="#" alt="Instagram"><i class="fa fa-instagram"></i></a></li>
+      <li><a href="#" alt="GitHub"><i class="fa fa-github-alt"></i></a></li>
+      <li><a href="#" alt="YouTube"><i class="fa fa-youtube"></i></a></li>
+    </ul>
+
+  </div>
+</aside> -->
+
+</div>
+
+<footer>
+  <div class="social-media">
+    <ul>
+      <li><a href="#" alt="Facebook"><i class="fa fa-facebook"></i></a></li>
+      <li><a href="#" alt="Instagram"><i class="fa fa-instagram"></i></a></li>
+      <li><a href="#" alt="GitHub"><i class="fa fa-github-alt"></i></a></li>
+      <li><a href="#" alt="YouTube"><i class="fa fa-youtube"></i></a></li>
+    </ul>
+  </div>
+
+  <div class="contact-info">
+
+  </div>
+  <div class="blog-archive">
+    <ul>
+      <li>2016</li>
+    </ul>
+
+  </div>
+</footer>
+</body>
+</html>
