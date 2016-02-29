@@ -18,6 +18,13 @@ html {
 /*	Courtesy of https://css-tricks.com/perfect-full-page-background-image/
 */}
 
+.code {
+  background-color: #333333;
+  color: #dddddd;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
 .blog-nav {
 	clear: right;
 	position: relative;
@@ -95,22 +102,19 @@ http://stackoverflow.com/a/11552460 */
 
 
 .main-blog {
-	width: 63%;
 	float: left;
 	background-color: #59879F;
 	margin-right: 5px;
-
 }
 
-aside {
+/*aside {
 	width: 35%;
 	float: right;
 	overflow: auto;
 	border-bottom: solid #6D4C1A 3px; 
-}
+}*/
 
 article {
-	height: 400px;
 	width: auto;
 	background-color: #FFE1B3;
 	overflow: auto;
