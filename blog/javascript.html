@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<head>
+  <title>Blog - Code Brittney</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/font-awesome-4.5.0/font-awesome-4.5.0/css/font-awesome.css">
+  <link href='https://fonts.googleapis.com/css?family=Press+Start+2P|Varela+Round' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+  <nav class="blog-nav">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="www.google.com">Projects</a></li>
+      <li><a href="www.google.com">About Me</a></li>
+      <li><a href="www.google.com">Outside...</a></li>
+    </ul>
+  </nav>
+  <div class="logo-header">
+    <img src="../imgs/RogueGalaxy.png">
+    <h1>Code Brittney</h1>
+  </div>
+
+<div class="wrapper">
+
+  <main class="main-blog">
+  
+    <article id="post">
+     <h1>A Close and Brief Comparison to JavaScript and Ruby</h1>
+
+     <h2>Error Syntax</h2>
+      <p>One struggle I'm quickly realizing is that JavaScript does not 
+      provide none of the nice error syntax I have grown accustomed to with 
+      Ruby.</p>
+      <p>It appears I'm not alone. If one simply Google searches "Help with JavaScript Syntax" they would find lots of results that provide help in this cryptic void. Before we get started on talking about some of these great tools I found, let's first look at a few examples. </p>
+      <p>In the code listed below you will see a simple Ruby method which includes some variables and a while loop. I want to do is loop banana and divide it by 5 for 10 times while x is less than 10. </p>
+      <pre class="code">
+         <code>
+            Ruby Be All Like... 
+            -----INPUT-------------------------------------
+            def banana
+              word = "banana"
+              x = 0
+              while x < 10 
+                "banana" / 5
+                x += 1
+              end
+            end
+            p banana   
+            -----OUTPUT------------------------------------- 
+                1: def banana 
+                2:   word = "banana" 
+                3:   x = 0 
+                4:   while x < 10 
+             => 5:     "banana" / 5 
+                6:   end 
+                7: end 
+             
+            NoMethodError: undefined method `/' for "banana":String 
+            from solution.rb:5:in `banana'            
+        </code>
+      </pre>    
+      <p>Ruh roh. Looks like something is wrong with my method! Looking above 
+      you will see the output of my Ruby method. I have an error on line 5, 
+      and it's relating to me trying to use '/' for a string. Hmmm. What could 
+      this mean? </p>
+      <p>I'm pretty sure that I can divide a string... let me look that up! 
+      When looking in the book, <em>Learn to Program</em> by Chris Pine, it 
+      mentions how a string can be added or multiplied, but nothing about 
+      dividing.  Nevertheless, this gives me enough info to move forward with my debugging. It seems that if I want to divide a string, I'm going to have to use some other processes to get what I want. I may want to go back to psuedocoding to get my logic down. <strong>I've got options, and that helps.</strong></p>
+      <p>But what if I wanted to write this same exact method as a function in JavaScript? Please take a look at the code below. You will see a lot of the essence is still there. I have my function named, I have my two variables, and I also have the same set up for my while loop. We invoke my function with a console.log to return a the functions value. Awesome! let's see what we get!</p>
+      <pre class="code">
+        <code>
+            JavaScript Be All Like...
+            -----INPUT-------------------------------------
+            function banana() {
+              var word = "banana";
+              var x = 0; 
+              while (x < 10){
+                x++;
+                return word / 5;
+              };
+            }
+            console.log(banana());
+            -----OUTPUT------------------------------------- 
+            NaN
+            >
+        </code>
+
+      </pre>
+      <p>...NaN...?</p>
+      <p>What does this mean? Is JavaScript on a strict break and not what to run this? (Me: You should run this. JavaScript: NaN...) What does this mean?</p>
+      <p>Turns out NaN means <strong>Not A Number</strong>. Duh, I am not working with numbers, I'm working with a string in the variable word. Where do I go from here? What's breaking?
+      </p>
+      <p>We can try using some sources that have been built to more throughly check for JavaScript mistakes.</p>
+      <h3><a href="http://www.javascriptlint.com/index.htm">JavaScript Lint</a></h3>
+      <p>I have by no means exhausted all of the resources available for 
+      JavaScript debugging. However, JavaScript Lint feels like it's the most 
+      user-friendly and widely inclusive package for understanding your code. 
+      There's an online editor to quickly check JavaScript, HTML, or URLs to see what's breaking. You can download it for several operating systems, for several IDEs, and even use it with the command line. </p>
+      <p>When I copy the JavaScript I wrote above into JavaScript Lint using their online option</p>
+      <img src="../imgs/javascript_lint_output.PNG" alt="Our JavaScript errors are a few steps closer to being more understandable">
+      <p>Ah okay, so I have a function that does not always return a value. This is certainly closer than what I had before with NaN. I have a few more steps to fixing my problems. But I can work with this!</p>
+      <p>Are there other resources we could check out?</p>
+      
+      <h3><a href="http://jshint.com/about/">JSHint</a></h3>
+      <p>JSHint seems to be another popular option. They have a list of several notable companies and projects that use JSHint. It doesn't seem to be as straight-forward newbie friendly as JavaScript Lint's online version, but guess what? It's already built into Cloud 9, and online IDE I use for a lot of my programming. I like that ease. :) </p>
+      <img src="../imgs/cloud_9_jshint.png" alt="A small snippet of what JSHint reveals in Cloud 9">
+      <p>JSHint sounded promising, so I pushed forward in exploring implementations with this. I found <a href="http://www.sublimelinter.com/en/latest/index.html">SublimeLinter 3</a> which is a framework for linting multiple languages. It feels like I found the holy grail in what I need. This is a plugin for Sublime Text 3 that not only introduces you to the world of linters (these little programs used to help with our programming syntax) but also to the world of Sublime plug-ins!</p>
+      <h3><a href="https://www.youtube.com/watch?v=u6fvJRao-E4">Sublime Text Tutorials #19 - How To Use SublimeLinter 3</a></h3>
+      <p>I used th link above to help walk me through setting it up. Reading is fundamental with getting this to work, so take your time and read through SublimeLinter's documentation. We're still going to be using JSHint, but this is simply one way to use it. SublimeLinter also allows for additional syntax plugins to be installed, which is something I may consider in the future. That means we can also use JavaScript Lint, and any other kinds we find along the way.</p>
+      <h2>Final Verdict...</h2>
+      <p>With JavaScript we need to stick our necks out more to write accurate code. As we learn, it's important to develop good practices and have personal defenses set up to catch any errors. Don't give up on any bugs you find, but try to take approach the problem in a different direction than what you're familiar with from Ruby. </p>
+
+
+
+
+
+
+
+
+
+    </article>
+
+   
+ </main>
+
+ 
+
+ </div>
+
+ <footer>
+  <div class="social-media">
+    <ul>
+      <li><a href="#" alt="Facebook"><i class="fa fa-facebook"></i></a></li>
+      <li><a href="#" alt="Instagram"><i class="fa fa-instagram"></i></a></li>
+      <li><a href="#" alt="GitHub"><i class="fa fa-github-alt"></i></a></li>
+      <li><a href="#" alt="YouTube"><i class="fa fa-youtube"></i></a></li>
+   </ul>
+ </div>
+
+ <div class="contact-info">
+
+ </div>
+ <div class="blog-archive">
+  <ul>
+    <li>2016</li>
+  </ul>
+  
+</div>
+</footer>
+</body>
+</html>
