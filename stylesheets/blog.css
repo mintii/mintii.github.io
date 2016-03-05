@@ -126,10 +126,10 @@ article {
 }
 
 article img {
-	height: 200px;
-	width: 97.75%;
-	object-fit: none ;
-	object-position: 60% 100%;
+	max-width:75%; 
+	max-height:75%;
+  	margin:auto;
+  	display:block;
 	padding: 5px;
 }
 
