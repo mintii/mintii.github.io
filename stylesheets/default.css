@@ -23,7 +23,7 @@ body {
 	width: auto;
 }
 
-.contact-main, .about-main {
+.contact-main, .about-main, .project-main {
 	position: relative;
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -35,13 +35,13 @@ body {
 	font-family: 'Varela Round', sans-serif;
 }
 
-.contact-main, .about-main h2{
+.contact-main h2, .about-main h2, .project-main h2{
 	color: #243E5C;
 }
 .contact-main, .about-main p{
 	color: #152D47;
 }
-.contact-main h1, .about-main h1{
+.contact-main h1, .about-main h1, .project-main h1{
 	font-family: 'Press Start 2P', cursive;
 	text-align: center;
 	margin: 10px;
