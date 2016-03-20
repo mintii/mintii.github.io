@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<head>
+	<title>Blog - Code Brittney</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/font-awesome-4.5.0/font-awesome-4.5.0/css/font-awesome.css">
+	<link href='https://fonts.googleapis.com/css?family=Press+Start+2P|Varela+Round' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+	<nav class="blog-nav">
+		<ul>
+			<li><a href="../index.html">Home</a></li>
+			<li><a href="index.html">Blog</a></li>
+			<li><a href="../project/index.html">Projects</a></li>
+			<li><a href="../about.html">About Me</a></li>
+			<li><a href="www.google.com">Outside...</a></li>
+		</ul>
+	</nav>
+	<div class="logo-header">
+		<img src="../imgs/roguegalaxy.png">
+		<h1>Code Brittney</h1>
+	</div>
+
+	<div class="wrapper">
+
+		<main class="main-blog">
+
+			<article id="post">
+				<h1>Let's Learn about Recursion</h1>  
+				<p>What's recursion, you ask? You're in the right place to learn! </p>
+
+				<h2>Definition</h2>
+				<p>A method can be considered recursive if it has an end goal and uses a reducing 
+				process in which to meet the end goal. Recursion can be thought of as iterations in 
+				Ruby or for and while loops in JavaScript. </p>
+				<p>Recursion can be seen as breaking down complex inputs into simpler ones. When one designs
+				a recursive function, each time it calls on itself it should be solely to reach the goal 
+				of the base case (if not, you would create an infinite loop!) It's a great tool to use when
+				processing or generating data with an unknown size where a one can instead make self-referential 
+				definitions within the function (meaning inductive and coinductive definitions, which are 
+				sort of like finite and infinite data. Read more about this here: 
+					<a href="http://www.cs.umd.edu/~micinski/posts/2012-09-04-on-understanding-coinduction.html">
+					On understanding coinduction</a>.</p>
+				<p>There are several types of recursive functions. For today's topic we will focus on single recursion 
+				which is also known as linear recursion. This is a function that makes a single call to itself each 
+				time the function runs. The classic example for linear recursive functions is with 
+				calculating factorials of numbers.
+				</p>
+				<h2>Let's see it in Ruby!</h2>
+				<pre class="code">
+				  <code>
+def factorial(num)
+	if num < 0 
+		return "Cannot calculate factorial of a negative number!" if num < 0
+	elsif num <= 1
+		1
+	else
+		num * factorial(num - 1)
+	end
+end
+				  </code>
+				  </pre>
+				<h2>Let's check it out in JavaScript!</h2>
+				<pre class="code">
+					<code>
+function factorial(num) {
+  if (num === 0) {
+    return 1;
+  }
+  elsif (num < 0){
+  	console.log("Cannot calculate factorial of a negative number!");
+  }
+  else {
+  return num * factorial(num - 1);
+}
+					</code>
+				</pre>
+				<p>As you can see, the structure is very similar to using variables where we are using the 
+				name of the function to calculate things onto it. Linear recursion is the most simplest process
+				of recursive functions, more advanced recursion can include indirectly calling functions from 
+				other functions which then calls the first back. 
+				</p>
+				<p>
+					<h3>If Recursion Appears so similar to iterations, why use it?</h3>
+					We want to use recursion when we have to perform a complex task and we need to simplify the steps. 
+				</p>
+				<p>
+					When you are deciding on a recursive function over other types of objects or methods, first determine the base case of the problem. 
+					What is the solution you want solved out of the method? Think about how in our factorial functions it has one job: multiply each number together until we reach the end. 
+				</p>
+				<p>Next, your recursive function should include a lop that will iterate until the base case is reached. This is what looks most similar like the for or while loops in JavaScript. We can include a separate counter, or the actual number we give it. </p>
+				<p>Finally, while we iterate to reach the base case, we should send the new arguments through the same function. </p>
+				<p>
+				<h3>Here are some sources I recommend to read for for recursive examples on the variety
+				of types available.</h3>
+					<ul>
+						<li>
+							<a href="http://www.sparknotes.com/cs/recursion/whatisrecursion/section2.rhtml">
+								SparkNotes: Types of Recursion
+							</a>
+						</li>
+						<li>
+							<a href="https://en.wikipedia.org/wiki/Recursion_(computer_science)#Types_of_recursion">
+								Wikipedia: Types of Recursion
+							</a>
+						</li>
+						<li>
+							<a href="http://ruby.bastardsbook.com/chapters/recursion/">The Bastards Book of Ruby: Recursion</a>
+						</li>
+					</ul>
+
+				</p>
+
+				<p>Still have questions, and looking to learn more? Wonderful, you're in the right spot!</p>
+				<h1>Let's Learn about Recursion</h1>  
+				<p>What's recursion, you ask? You're in the right place to learn! </p>
+
+			</article>
+
+
+		</main>
+
+
+	</div>
+
+	<footer>
+<!--   <div class="social-media">
+<ul>
+<li><a href="#" alt="Facebook"><i class="fa fa-facebook"></i></a></li>
+<li><a href="#" alt="Instagram"><i class="fa fa-instagram"></i></a></li>
+<li><a href="#" alt="GitHub"><i class="fa fa-github-alt"></i></a></li>
+<li><a href="#" alt="YouTube"><i class="fa fa-youtube"></i></a></li>
+</ul>
+</div> -->
+
+<div class="contact-info">
+
+</div>
+<div class="blog-archive">
+	<ul>
+		<li>2016</li>
+	</ul>
+
+</div>
+</footer>
+</body>
+</html>
